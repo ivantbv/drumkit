@@ -131,4 +131,4 @@ keys.forEach(key => key.addEventListener('click', (e) => {
     playTom();
 } else if (e.target == cssL) {
     playTink();
-}
+}}))
