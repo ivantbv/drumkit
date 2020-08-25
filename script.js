@@ -100,3 +100,35 @@ document.addEventListener('keyup', (e) => {
     cssAdd.classList.remove('playing');
   }
 })
+//click support
+
+keys.forEach(key => key.addEventListener('click', (e) => {
+    let cssA = document.getElementById('A')
+    let cssS = document.getElementById('S')
+    let cssD = document.getElementById('D')
+    let cssF = document.getElementById('F')
+    let cssG = document.getElementById('G')
+    let cssH = document.getElementById('H')
+    let cssJ = document.getElementById('J')
+    let cssK = document.getElementById('K')
+    let cssL = document.getElementById('L')
+    
+    if (e.target == cssA) {
+    playClap();
+} else if (e.target == cssS) {
+    playHiHat()
+} else if (e.target == cssD) {
+    playKick();
+} else if (e.target == cssF) {
+    playOpenHat();
+} else if (e.target == cssG) {
+    playBoom();
+} else if (e.target == cssH) {
+    playRide();
+} else if (e.target == cssJ) {
+    playSnare();
+} else if (e.target == cssK) {
+    playTom();
+} else if (e.target == cssL) {
+    playTink();
+}
