@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="keys">
+    <div data-key="65" class="key" id="A">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
+    </div>
+    <div data-key="83" class="key" id="S">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key" id="D">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key" id="F">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+    <div data-key="71" class="key" id="G">
+      <kbd>G</kbd>
+      <span class="sound">boom</span>
+    </div>
+    <div data-key="72" class="key" id="H">
+      <kbd>H</kbd>
+      <span class="sound">ride</span>
+    </div>
+    <div data-key="74" class="key" id="J">
+      <kbd>J</kbd>
+      <span class="sound">snare</span>
+    </div>
+    <div data-key="75" class="key" id="K">
+      <kbd>K</kbd>
+      <span class="sound">tom</span>
+    </div>
+    <div data-key="76" class="key" id="L">
+      <kbd>L</kbd>
+      <span class="sound">tink</span>
+    </div>
+  </div>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.wav"></audio>
+  <audio data-key="68" src="sounds/kick.wav"></audio>
+  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="71" src="sounds/boom.wav"></audio>
+  <audio data-key="72" src="sounds/ride.wav"></audio>
+  <audio data-key="74" src="sounds/snare.wav"></audio>
+  <audio data-key="75" src="sounds/tom.wav"></audio>
+  <audio data-key="76" src="sounds/tink.wav"></audio>
+
+<script>
+let keys = document.querySelectorAll('.key')
+let audio = document.getElementsByTagName('audio')
+
+function playClap(url) {
+  new Audio('sounds/clap.wav').play();
+}
+function playHiHat(url) {
+  new Audio('sounds/hihat.wav').play();
+}
+function playKick(url) {
+  new Audio('sounds/kick.wav').play();
+}
+function playOpenHat(url) {
+  new Audio('sounds/openhat.wav').play();
+}
+function playBoom(url) {
+  new Audio('sounds/boom.wav').play();
+}
+function playRide(url) {
+  new Audio('sounds/ride.wav').play();
+}
+function playSnare(url) {
+  new Audio('sounds/snare.wav').play();
+}
+function playTom(url) {
+  new Audio('sounds/tom.wav').play();
+}
+function playTink(url) {
+  new Audio('sounds/tink.wav').play();
+}
+
+document.addEventListener('keydown', (e) => {
+  e.preventDefault();
+  if (e.which == 65) { 
+ let cssAdd = document.getElementById('A')
+    cssAdd.classList.toggle('playing');
+    playClap();
+  } else if (e.which == 83) {
+    let cssAdd = document.getElementById('S')
+    cssAdd.classList.toggle('playing');
+    playHiHat();
+  } else if (e.which == 68) {
+    let cssAdd = document.getElementById('D')
+    cssAdd.classList.toggle('playing');
+    playKick();
+  } else if (e.which == 70) {
+    let cssAdd = document.getElementById('F')
+    cssAdd.classList.toggle('playing');
+    playOpenHat();
+  } else if (e.which == 71) {
+    let cssAdd = document.getElementById('G')
+    cssAdd.classList.toggle('playing');
+    playBoom();
+  } else if (e.which == 72) {
+    let cssAdd = document.getElementById('H')
+    cssAdd.classList.toggle('playing');
+    playRide();
+  } else if (e.which == 74) {
+    let cssAdd = document.getElementById('J')
+    cssAdd.classList.toggle('playing');
+    playSnare();
+  } else if (e.which == 75) {
+    let cssAdd = document.getElementById('K')
+    cssAdd.classList.toggle('playing');
+    playTom();
+  } else if (e.which == 76) {
+    let cssAdd = document.getElementById('L')
+    cssAdd.classList.toggle('playing');
+    playTink();
+  }
+})
+
+document.addEventListener('keyup', (e) => {
+  e.preventDefault();
+  if (e.which == 65) {
+    let cssAdd = document.getElementById('A')
+       cssAdd.classList.remove('playing');
+     } else if (e.which == 83) {
+    let cssAdd = document.getElementById('S')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 68) {
+    let cssAdd = document.getElementById('D')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 70) {
+    let cssAdd = document.getElementById('F')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 71) {
+    let cssAdd = document.getElementById('G')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 72) {
+    let cssAdd = document.getElementById('H')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 74) {
+    let cssAdd = document.getElementById('J')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 75) {
+    let cssAdd = document.getElementById('K')
+    cssAdd.classList.remove('playing');
+  } else if (e.which == 76) {
+    let cssAdd = document.getElementById('L')
+    cssAdd.classList.remove('playing');
+  }
+})
+
+</script>
+
+
+</body>
+</html>
